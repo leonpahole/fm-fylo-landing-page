@@ -1,0 +1,42 @@
+@use "../theme/colors.scss";
+@use "../theme/breakpoints.scss";
+@use "../theme/layout.scss";
+
+.features {
+  display: flex;
+  justify-content: center;
+
+  background-color: colors.$dark-blue-2;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: minmax(auto, 400px);
+
+    row-gap: 70px;
+
+    @include breakpoints.md {
+      grid-template-columns: repeat(2, minmax(200px, 400px));
+      gap: 30px 70px;
+    }
+
+    .feature {
+      text-align: center;
+      color: colors.$white;
+
+      img {
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        line-height: 1.3;
+      }
+    }
+  }
+}

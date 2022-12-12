@@ -1,0 +1,133 @@
+@use "../theme/colors.scss";
+@use "../theme/layout.scss";
+@use "../theme/breakpoints.scss";
+
+.footer {
+  .max-width-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  background-color: colors.$dark-blue-3;
+
+  margin-left: -(layout.$horizontal-padding-mobile);
+  margin-right: -(layout.$horizontal-padding-mobile);
+
+  @include breakpoints.md {
+    margin-left: -(layout.$horizontal-padding-desktop);
+    margin-right: -(layout.$horizontal-padding-desktop);
+  }
+
+  @include layout.horizontal-padding;
+
+  padding-top: 240px;
+
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.md {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }
+
+  .logo {
+    margin-bottom: 36px;
+  }
+
+  .contact-section {
+    @include breakpoints.md {
+      display: flex;
+      gap: 60px;
+    }
+
+    .contact-article {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+
+      @include breakpoints.md {
+        max-width: 300px;
+      }
+
+      address,
+      a {
+        font-style: normal;
+        color: colors.$white;
+        text-decoration: none;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  .nav-section-1 {
+    margin-top: 50px;
+    @include breakpoints.md {
+      margin-top: 0;
+    }
+  }
+
+  .nav-section-2 {
+    margin-top: 40px;
+    @include breakpoints.md {
+      margin-top: 0;
+    }
+  }
+
+  .nav-section {
+    ul {
+      list-style-type: none;
+
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      padding: 0;
+      margin: 0;
+
+      a {
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .nav-section-socials {
+    margin-top: 60px;
+    @include breakpoints.md {
+      margin-top: 0px;
+    }
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid colors.$white;
+
+      &:hover {
+        border-color: colors.$cyan;
+        color: colors.$cyan;
+      }
+    }
+  }
+
+  .attribution {
+    padding: 20px;
+  }
+}

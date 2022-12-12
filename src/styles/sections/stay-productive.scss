@@ -1,0 +1,73 @@
+@use "../theme/colors.scss";
+@use "../theme/breakpoints.scss";
+
+.stay-productive {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 40px;
+
+  @include breakpoints.md {
+    flex-direction: row;
+    column-gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+
+    max-width: 1000px;
+  }
+
+  .img-wrapper {
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    min-width: 200px;
+
+    .img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .content {
+    color: colors.$white;
+
+    @include breakpoints.md {
+      flex-basis: 500px;
+      flex-shrink: 1;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @include breakpoints.md {
+        text-align: start;
+        font-size: 33px;
+      }
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    .p2 {
+      margin-top: 24px;
+    }
+
+    .link {
+      color: colors.$cyan;
+      text-decoration: none;
+
+      border-bottom: 1px solid colors.$cyan;
+      padding-bottom: 6px;
+
+      display: inline-flex;
+      align-items: center;
+
+      gap: 5px;
+
+      margin-top: 24px;
+    }
+  }
+}

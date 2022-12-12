@@ -1,0 +1,72 @@
+@use "../theme/colors.scss";
+@use "../components/button.scss";
+@use "../theme/layout.scss";
+@use "../theme/breakpoints.scss";
+
+.intro {
+  background-color: colors.$dark-blue-1;
+
+  @include layout.negative-margin-for-horizontal-padding;
+  @include layout.horizontal-padding;
+
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include layout.horizontal-padding;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    color: colors.$white;
+
+    .wave-background {
+      position: absolute;
+      width: 100vw;
+      bottom: 0;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .img {
+      object-fit: contain;
+      height: auto;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .heading {
+      margin-top: 40px;
+
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .subheading {
+      margin-top: 20px;
+
+      font-size: 16px;
+      line-height: 1.3;
+
+      text-align: center;
+    }
+
+    .button {
+      @include button.primary-button;
+
+      margin-top: 30px;
+      max-width: 300px;
+    }
+  }
+}

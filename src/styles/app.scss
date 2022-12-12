@@ -1,0 +1,34 @@
+@use "./theme/colors.scss";
+@use "./theme/breakpoints.scss";
+@use "./theme/layout.scss";
+@use "./theme/typography.scss";
+
+@use "./sections/nav.scss";
+@use "./sections/intro.scss";
+@use "./sections/features.scss";
+@use "./sections/stay-productive.scss";
+@use "./sections/reviews.scss";
+@use "./sections/early-access.scss";
+@use "./sections/footer.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background-color: colors.$dark-blue-2;
+  @include layout.horizontal-padding;
+
+  min-width: 320px;
+  width: auto !important;
+  width: 320px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}

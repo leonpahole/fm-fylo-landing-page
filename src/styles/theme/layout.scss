@@ -1,0 +1,24 @@
+@use "./breakpoints.scss";
+
+$horizontal-padding-mobile: 30px;
+$horizontal-padding-desktop: 50px;
+
+@mixin horizontal-padding() {
+  padding-left: $horizontal-padding-mobile;
+  padding-right: $horizontal-padding-mobile;
+
+  @include breakpoints.md {
+    padding-left: $horizontal-padding-desktop;
+    padding-right: $horizontal-padding-desktop;
+  }
+}
+
+@mixin negative-margin-for-horizontal-padding() {
+  margin-left: -$horizontal-padding-mobile;
+  margin-right: -$horizontal-padding-mobile;
+
+  @include breakpoints.md {
+    margin-left: -$horizontal-padding-desktop;
+    margin-right: -$horizontal-padding-desktop;
+  }
+}

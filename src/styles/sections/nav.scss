@@ -1,0 +1,66 @@
+@use "../theme/colors.scss";
+@use "../theme/breakpoints.scss";
+@use "../theme/layout.scss";
+
+.header {
+  background-color: colors.$dark-blue-1;
+  @include layout.negative-margin-for-horizontal-padding;
+
+  .nav {
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    @include layout.horizontal-padding;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    row-gap: 20px;
+
+    @include breakpoints.sm {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include breakpoints.md {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .logo-wrapper {
+    justify-content: space-between;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    .link-item {
+      .link {
+        color: colors.$white;
+        text-decoration: none;
+
+        padding: 2px 15px;
+
+        @include breakpoints.md {
+          padding: 2px 20px;
+        }
+
+        &:hover {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

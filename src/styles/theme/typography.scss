@@ -1,0 +1,29 @@
+@use "./colors.scss";
+
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway.ttf");
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url("../fonts/OpenSans.ttf");
+}
+
+body {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: colors.$white;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+a {
+  font-style: normal;
+  color: colors.$white;
+  text-decoration: none;
+}
