@@ -32,7 +32,7 @@ yarn build
 ### Links
 
 - Solution URL: [GitHub](https://github.com/leonpahole/fm-fylo-landing-page)
-- Live Site URL:
+- Live Site URL: [https://silly-pony-70257b.netlify.app/](https://silly-pony-70257b.netlify.app/)
 
 ## My process
 
